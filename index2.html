@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>STARBUCKS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/d3Style.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+    <script type="text/javascript" src="static/js/app5.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Starbucks and Demographics</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home
+              </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index1.html">Location & Demographics</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index2.html"> Nutrition</a>
+                    <span class="sr-only">(current)</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index3.html">Global Locations</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+
+    <div class="container-fluid">
+        <div class="dropdown">
+            <div class="col-md-12">
+                <label><b>Choose a Beverage Type: </b><select id="selectButton0"></select></label>
+                <label><b>Choose a Beverage Preparation Style: </b><select id="selectButton"></select></label>
+                <label><b>Select the X-Axis: </b><select id="selectButton1"></select></label>
+                <label><b>Select the Y-Axis: </b><select id="selectButton2"></select></label>
+            </div>
+        </div>
+    </div>
+
+    <hr style="color:lightgray; border-width: 3px;">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <center>
+                    <h1>Starbucks Beverage Nutrition Information</h1>
+                    <h3><span id="x_title"></span> vs <span id="y_title"></span></h3>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="scatter">
+                    <!-- We append our chart here. -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="article">
+                    <h2>Conclusions</h2>
+                    <p>Nutritionally speaking there are many positive correlations amongst nutrients. Certain correlations we would expect such as the not-so-good for you nutrients like sugar and fat tend to be positively correlated with one another.</p>
+                    <p>What was surprising to me was how protein fell into the mix. It showed positive correlations with calories, carbohydrates, sodium, and fat. All nutrients that are commonly perceived as bad for you when taken in excess. It also showed
+                        positive correlations to things such as vitamin A and calcium. </p>
+                    <p>That being said, the positive correlations would fluctuate based upon beverage and preparation type. For instance, a Classic Espresso Beverage prepared with 2% milk showed a slight positive correlation between protein and sugar, however
+                        when you change the beverage type to Tazo Tea drinks and keep 2% milk, the correlation becomes much more noticeable.</p>
+                    <p>This wasn’t just noticeable between types of beverages prepared the same way, but so to with the same beverage prepared differently. For instance Signature Espresso drinks show a slight positive correlation between sodium and sugar
+                        when prepared with 2% milk, but when prepared with soymilk there is zero correlation due to several of the beverages having no sodium. </p>
+                    <p>Overall the correlations found are largely impacted by the beverage type, but preparation impacts the results as well. This makes sense when you consider the individual ingredients that make up each beverage. A Frappuccino made with
+                        nonfat milk is going to show positive correlations to sugars, fat, cholesterol and the like just because of the core ingredients that make up a Frappuccino. Conversely, even a black cup of coffee with hardly any nutritional value
+                        can be skewed with the addition of cream and sugar.</p>
+                    <p>I invite you to play around with the drop downs to see what things may impact your favorite Starbucks beverage!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
