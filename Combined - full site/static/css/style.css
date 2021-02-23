@@ -1,0 +1,146 @@
+.navbar {
+    background-color: #00704A !important;
+}
+
+.incomeGraph {
+    fill: #00704A;
+    stroke: black;
+    stroke-width: .5;
+    opacity: .75;
+    padding: 2px;
+    padding-top: 0px;
+}
+
+.popGraph {
+    fill: #00704A;
+    stroke: black;
+    stroke-width: .5;
+    opacity: .75;
+    padding: 2px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+}
+
+.tooltip {
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    padding: 2px;
+    padding-top: 8px;
+    font: 10px sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    background: #00704A;
+    border: 0;
+    border-radius: 10px;
+}
+
+.iframeContainer {
+    padding: 20px;
+    border: 1px solid #e3e3e3;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-bottom: 50px;
+}
+
+#selectButton0 {
+    width: 350px;
+}
+
+#selectButton {
+    width: 350px;
+}
+
+#selectButton1 {
+    width: 350px;
+}
+
+#selectButton2 {
+    width: 350px;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    /* width: 400px; */
+    line-height: 23px;
+    margin-bottom: 5px;
+}
+
+thead,
+tbody,
+#summary-table {
+    table-layout: fixed !important;
+}
+
+@media only screen and (max-width: 1200px) {
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        margin: 0 0 1rem 0;
+    }
+    tr:nth-child(odd) {
+        background: #ccc;
+    }
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    /*
+		Label the data
+    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+		*/
+    td:nth-of-type(1):before {
+        content: "City";
+    }
+    td:nth-of-type(2):before {
+        content: "Number of Starbucks";
+    }
+    td:nth-of-type(3):before {
+        content: "Median Income";
+    }
+    td:nth-of-type(4):before {
+        content: "Median Age";
+    }
+}
